@@ -53,8 +53,6 @@ var makeHobbits = function() {
   };
   makeHobbits ();
 
-
-
 //Part 3
 var keepItSecretKeepItSafe = function () {
 
@@ -64,11 +62,19 @@ var keepItSecretKeepItSafe = function () {
     }
   keepItSecretKeepItSafe();
 
-// function makeBuddies(){
-//   // your answers here
-// }
+var makeBuddies = function (){
+  $(rivendell).append("<aside></aside>");
+  $("aside").append("<ul><ul>");
 
-// makeBuddies();
+  for (var i = 0; i < buddies.length; i++) {
+  var text = buddies[i];
+
+  $("ul").eq(1).append($("<li></li>").html(text));
+  // $("ul").eq(1).append("<li><li>");
+  // $("li").eq(i).append(text);
+     }
+  };
+  makeBuddies();
 
 // function beautifulStranger(){
 //   // your answers here
