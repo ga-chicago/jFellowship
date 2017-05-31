@@ -17,77 +17,134 @@ var buddies = [
 ];
 
 var lands = ['The Shire', 'Rivendell', 'Mordor'];
-var body = document.body;
-var section = '<section></section>';
+var body = $("body");
+var section = $('<section></section>');
 
 function makeMiddleEarth() {
-  // your answers here
-}
+  section.attr("id","middle-earth");
+  body.append(section);
+  $.each(lands,function(i,landName){
+    section.append("<article><h1>" + landName + "</h1></article>");
+  });
+};
 
 makeMiddleEarth();
 
+
+
+var theShire = $($("article")[0]);
+var rivendell = $($("article")[1]);
+var mordor = $($("article")[2]);
+var listOfHobbits = $("<ul></ul>");
+
 function makeHobbits(){
-  // your answers here
-}
+  theShire.append(listOfHobbits);
+  $.each(hobbits,function(i,hobbit){
+    listOfHobbits.append("<li class='hobbit'>" + hobbit + "</li>")
+  });
+};
 
 makeHobbits();
 
+
+
+var theRing = $("<div id='the-ring' class='magic-imbued-jewelry'></div>");
+var frodo = $($(".hobbit")[0])
+var sam = $($(".hobbit")[1])
+
 function keepItSecretKeepItSafe(){
-  // your answers here
+  frodo.append(theRing);
 }
 
 keepItSecretKeepItSafe();
 
+
+
 function makeBuddies(){
-  // your answers here
+  var buddiesList = $("<ul></ul>");
+  var aside = $("<aside></aside>")
+  $.each(buddies,function(i,buddy){
+    buddiesList.append("<li>" + buddy + "</li>");
+  })
+  aside.append(buddiesList).appendTo(rivendell);
 }
 
 makeBuddies();
 
+
+
 function beautifulStranger(){
-  // your answers here
+  $($("aside ul li")[3]).text("Aragorn");
 }
 
 beautifulStranger();
 
+
+
 function leaveTheShire(){
-  // your answers here
+  listOfHobbits.appendTo(rivendell);
 }
 
 leaveTheShire();
 
+
+
+var theFellowship = $("<div id='the-fellowship'></div>");
+var theFellowshipList = $("<ul></ul>");
+var allTheFriends = $("li");
+
 function forgeTheFellowship() {
-  // your answers here
+  theFellowship.append(theFellowshipList).appendTo(rivendell);
+  $.each(allTheFriends,function(i,name){
+    $(this).appendTo(theFellowshipList);
+    alert($(name).text() + " has joined the party");
+  })
 }
 
 forgeTheFellowship();
 
+
+
 function theBalrog(){
-  // your answers here
+  $($("li")[0]).text("Gandalf the White").css("background-color","white").css("border","solid 2px gray");
 }
 
 theBalrog();
 
+
+
 function hornOfGondor() {
-  // your answers here
+  alert("The horn of Gondor has been blown!!! :(");
+  $($("li")[4]).remove();
 }
 
 hornOfGondor();
 
+
+
 function itsDangerousToGoAlone() {
-  // your answers here
+  var mordorList = $("<ul></ul>").append(frodo).append(sam);
+  mordor.append(mordorList).append("<div id='mount-doom'></div>");
 }
 
 itsDangerousToGoAlone();
 
+
+
+var gollum = $("<div id='gollum'></div>");
+
 function weWantsIt() {
-  // your answers here
+  gollum.appendTo(mordor).append(theRing).appendTo($("#mount-doom"))
 }
 
 weWantsIt();
 
+
+
 function thereAndBackAgain(){
-  // your answers here
+  gollum.remove();
+  theRing.remove();
+  var theShireHobbitList = $("<ul></ul>").append($(".hobbit")).appendTo(theShire);
 }
 
 thereAndBackAgain();
