@@ -20,74 +20,84 @@ var lands = ['The Shire', 'Rivendell', 'Mordor'];
 var body = document.body;
 var section = '<section></section>';
 
-function makeMiddleEarth() {
-  // your answers here
-}
+//part 1
+var makeMiddleEarth = function() {
+  var middleEarth = section;
+  $("body").append(middleEarth);
+  $("section").attr("id", "middle-earth");
+  
+  for (var i = 0; i < lands.length; i++){
+    var text = lands[i];
+    $("#middle-earth").append("<article></article>");
+    $("article").eq(i).append("<h1></h1>");
+    $("h1").eq(i).append(text);
+  }
+};
 
 makeMiddleEarth();
 
-function makeHobbits(){
-  // your answers here
-}
+// function makeHobbits(){
+//   // your answers here
+// }
 
-makeHobbits();
+// makeHobbits();
 
-function keepItSecretKeepItSafe(){
-  // your answers here
-}
+// function keepItSecretKeepItSafe(){
+//   // your answers here
+// }
 
-keepItSecretKeepItSafe();
+// keepItSecretKeepItSafe();
 
-function makeBuddies(){
-  // your answers here
-}
+// function makeBuddies(){
+//   // your answers here
+// }
 
-makeBuddies();
+// makeBuddies();
 
-function beautifulStranger(){
-  // your answers here
-}
+// function beautifulStranger(){
+//   // your answers here
+// }
 
-beautifulStranger();
+// beautifulStranger();
 
-function leaveTheShire(){
-  // your answers here
-}
+// function leaveTheShire(){
+//   // your answers here
+// }
 
-leaveTheShire();
+// leaveTheShire();
 
-function forgeTheFellowship() {
-  // your answers here
-}
+// function forgeTheFellowship() {
+//   // your answers here
+// }
 
-forgeTheFellowship();
+// forgeTheFellowship();
 
-function theBalrog(){
-  // your answers here
-}
+// function theBalrog(){
+//   // your answers here
+// }
 
-theBalrog();
+// theBalrog();
 
-function hornOfGondor() {
-  // your answers here
-}
+// function hornOfGondor() {
+//   // your answers here
+// }
 
-hornOfGondor();
+// hornOfGondor();
 
-function itsDangerousToGoAlone() {
-  // your answers here
-}
+// function itsDangerousToGoAlone() {
+//   // your answers here
+// }
 
-itsDangerousToGoAlone();
+// itsDangerousToGoAlone();
 
-function weWantsIt() {
-  // your answers here
-}
+// function weWantsIt() {
+//   // your answers here
+// }
 
-weWantsIt();
+// weWantsIt();
 
-function thereAndBackAgain(){
-  // your answers here
-}
+// function thereAndBackAgain(){
+//   // your answers here
+// }
 
-thereAndBackAgain();
+// thereAndBackAgain();
