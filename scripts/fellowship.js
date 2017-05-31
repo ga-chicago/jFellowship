@@ -53,16 +53,16 @@ var makeHobbits = function() {
   };
   makeHobbits ();
 
-//   // your answers here
-// }
 
-// makeHobbits();
 
-// function keepItSecretKeepItSafe(){
-//   // your answers here
-// }
+//Part 3
+var keepItSecretKeepItSafe = function () {
 
-// keepItSecretKeepItSafe();
+  $("li").eq(0).append("<div></div>");
+  $("div").attr("class", "magic-imbued-jewelry");
+  $("div").attr("id", "the-ring");
+    }
+  keepItSecretKeepItSafe();
 
 // function makeBuddies(){
 //   // your answers here
