@@ -97,7 +97,7 @@ function forgeTheFellowship() {
   theFellowship.append(theFellowshipList).appendTo(rivendell);
   $.each(allTheFriends,function(i,name){
     $(this).appendTo(theFellowshipList);
-//    alert($(name).text() + " has joined the party");
+    alert($(name).text() + " has joined the party");
   })
 }
 
