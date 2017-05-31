@@ -62,6 +62,7 @@ var keepItSecretKeepItSafe = function () {
     }
   keepItSecretKeepItSafe();
 
+//Part 4
 var makeBuddies = function (){
   $(rivendell).append("<aside></aside>");
   $("aside").append("<ul><ul>");
@@ -70,17 +71,17 @@ var makeBuddies = function (){
   var text = buddies[i];
 
   $("ul").eq(1).append($("<li></li>").html(text));
-  // $("ul").eq(1).append("<li><li>");
-  // $("li").eq(i).append(text);
+  
      }
   };
   makeBuddies();
 
-// function beautifulStranger(){
-//   // your answers here
-// }
+//Part 5
+var beautifulStranger = function (){
+  $("aside ul li").eq(3).html("Aragorn");
+  }
 
-// beautifulStranger();
+beautifulStranger();
 
 // function leaveTheShire(){
 //   // your answers here
