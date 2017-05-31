@@ -36,7 +36,23 @@ var makeMiddleEarth = function() {
 
 makeMiddleEarth();
 
-// function makeHobbits(){
+var theShire = $("article").eq(0);
+var rivendell = $("article").eq(1);
+var mordor = $("article").eq(2);
+
+//Part 2
+var makeHobbits = function() {
+   $(theShire).append("<ul></ul>");
+
+  for (var i = 0; i < hobbits.length; i++){
+    var text = hobbits[i];
+    $("ul").append("<li></li>");
+    $("li").eq(i).append(text);
+    $("li").eq(i).attr("class", "hobbit");
+    }
+  };
+  makeHobbits ();
+
 //   // your answers here
 // }
 
