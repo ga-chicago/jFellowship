@@ -89,7 +89,7 @@ function forgeTheFellowship() {
   rivendell.append('<div class="theFellowship"></div>')
   $.each($('li'), function(i, character){
     $('.theFellowship').append(character)
-    
+    alert($(character).text() + " has joined the the Fellowship");
   })
 }
 
