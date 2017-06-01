@@ -109,7 +109,7 @@ var forgeTheFellowship = function () {
 }
 
 forgeTheFellowship();
- //Part 7
+ //Part 8
 var theBalrog =function (){
   $(fellowship).eq(0).html("Gandalf the White");
   $(fellowship).eq(0).css({"background-color": "white", "border": "5px solid grey"});
@@ -117,19 +117,25 @@ var theBalrog =function (){
 
 theBalrog();
 
+//part 9
 var hornOfGondor = function () {
-  alert("The horn of Gondor!");
-  $(fellowship).eq(4).remove();
+  // alert("The horn of Gondor!");
+  $(fellowship).eq(4).remove()
 
 }
 
 hornOfGondor();
 
-// function itsDangerousToGoAlone() {
-//   // your answers here
-// }
+//Part 10
+var itsDangerousToGoAlone = function () {
+  $(mordor).append("<div>");
+  $("div").eq(3).attr("id", "mount-dooom");
 
-// itsDangerousToGoAlone();
+  $($(mordor).append($(fellowship).eq(5)));
+  $($(mordor).append($(fellowship).eq(6)));
+}
+
+itsDangerousToGoAlone();
 
 // function weWantsIt() {
 //   // your answers here
