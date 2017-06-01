@@ -147,7 +147,7 @@ var weWantsIt = function () {
   $("div").eq(4).attr("id", "gollum");
   // $("#gollum").append(theRing).eq();
   $("#gollum").append(frodo).eq();
-  $($("#mount-dooom").append($("#gollum").eq()));
+  $("#mount-dooom").append($("#gollum"));
 
  }
 
