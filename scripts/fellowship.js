@@ -36,6 +36,7 @@ var makeMiddleEarth = function() {
 
 makeMiddleEarth();
 
+//global variables
 var theShire = $("article").eq(0);
 var rivendell = $("article").eq(1);
 var mordor = $("article").eq(2);
@@ -83,23 +84,37 @@ var beautifulStranger = function (){
 
 beautifulStranger();
 
-// function leaveTheShire(){
-//   // your answers here
-// }
+//Part 6
+var leaveTheShire = function (){
+  // var hobbits = $(".hobbit").eq();//why can't I use this?
+  $("aside").append($("ul").eq(0));
+    }
 
-// leaveTheShire();
+  leaveTheShire();
 
-// function forgeTheFellowship() {
-//   // your answers here
-// }
+var fellowship = $("article").eq(1).find("li")
 
-// forgeTheFellowship();
+//Part 7
+var forgeTheFellowship = function () {
+  $(rivendell).append("<div>");
+  $("div").eq(2).attr("id", "the-Fellowship");
 
-// function theBalrog(){
-//   // your answers here
-// }
+  
 
-// theBalrog();
+  for (var i = 0; i < fellowship.length; i++) {
+
+    $($("#the-Fellowship").append($(fellowship).eq(i)));
+      // alert($(fellowship.eq(i)).text() + " has joined the party!")
+      }
+}
+
+forgeTheFellowship();
+ //Part 7
+var theBalrog =function (){
+  $(fellowship).eq(0).html("Gandalf the White");
+}
+
+theBalrog();
 
 // function hornOfGondor() {
 //   // your answers here
