@@ -153,8 +153,13 @@ var weWantsIt = function () {
 
  weWantsIt();
 
-// function thereAndBackAgain(){
-//   // your answers here
-// }
+var thereAndBackAgain =function (){
+    // ($(mordor).find($("li")));
+    $(theShire).append($("#middle-earth").find($(".hobbit")));
+    $("#gollum").remove();
+    $("aside").find("ul").remove();
 
-// thereAndBackAgain();
+
+  }
+
+thereAndBackAgain();
