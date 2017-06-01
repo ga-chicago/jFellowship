@@ -63,6 +63,8 @@ var keepItSecretKeepItSafe = function () {
     }
   keepItSecretKeepItSafe();
 
+var theRing = $("#the-ring");
+
 //Part 4
 var makeBuddies = function (){
   $(rivendell).append("<aside></aside>");
@@ -137,11 +139,19 @@ var itsDangerousToGoAlone = function () {
 
 itsDangerousToGoAlone();
 
-// function weWantsIt() {
-//   // your answers here
-// }
+var frodo = $(fellowship).eq(5).find("div");
 
-// weWantsIt();
+//part 11
+var weWantsIt = function () {
+  $(mordor).append("<div>");
+  $("div").eq(4).attr("id", "gollum");
+  // $("#gollum").append(theRing).eq();
+  $("#gollum").append(frodo).eq();
+  $($("#mount-dooom").append($("#gollum").eq()));
+
+ }
+
+ weWantsIt();
 
 // function thereAndBackAgain(){
 //   // your answers here
