@@ -20,74 +20,146 @@ var lands = ['The Shire', 'Rivendell', 'Mordor'];
 var body = document.body;
 var section = '<section></section>';
 
-function makeMiddleEarth() {
-  // your answers here
-}
+//part 1
+var makeMiddleEarth = function() {
+  var middleEarth = section;
+  $("body").append(middleEarth);
+  $("section").attr("id", "middle-earth");
+  
+  for (var i = 0; i < lands.length; i++){
+    var text = lands[i];
+    $("#middle-earth").append("<article></article>");
+    $("article").eq(i).append("<h1></h1>");
+    $("h1").eq(i).append(text);
+  }
+};
 
 makeMiddleEarth();
 
-function makeHobbits(){
-  // your answers here
-}
+//global variables
+var theShire = $("article").eq(0);
+var rivendell = $("article").eq(1);
+var mordor = $("article").eq(2);
 
-makeHobbits();
+//Part 2
+var makeHobbits = function() {
+   $(theShire).append("<ul></ul>");
 
-function keepItSecretKeepItSafe(){
-  // your answers here
-}
+  for (var i = 0; i < hobbits.length; i++){
+    var text = hobbits[i];
+    $("ul").append("<li></li>");
+    $("li").eq(i).append(text);
+    $("li").eq(i).attr("class", "hobbit");
+    }
+  };
+  makeHobbits ();
 
-keepItSecretKeepItSafe();
+//Part 3
+var keepItSecretKeepItSafe = function () {
 
-function makeBuddies(){
-  // your answers here
-}
+  $("li").eq(0).append("<div></div>");
+  $("div").attr("class", "magic-imbued-jewelry");
+  $("div").attr("id", "the-ring");
+    }
+  keepItSecretKeepItSafe();
 
-makeBuddies();
+var theRing = $("#the-ring");
 
-function beautifulStranger(){
-  // your answers here
-}
+//Part 4
+var makeBuddies = function (){
+  $(rivendell).append("<aside></aside>");
+  $("aside").append("<ul><ul>");
+
+  for (var i = 0; i < buddies.length; i++) {
+  var text = buddies[i];
+
+  $("ul").eq(1).append($("<li></li>").html(text));
+  
+     }
+  };
+  makeBuddies();
+
+//Part 5
+var beautifulStranger = function (){
+  $("aside ul li").eq(3).html("Aragorn");
+  }
 
 beautifulStranger();
 
-function leaveTheShire(){
-  // your answers here
-}
+//Part 6
+var leaveTheShire = function (){
+  // var hobbits = $(".hobbit").eq();//why can't I use this?
+  $("aside").append($("ul").eq(0));
+    }
 
-leaveTheShire();
+  leaveTheShire();
 
-function forgeTheFellowship() {
-  // your answers here
+var fellowship = $("article").eq(1).find("li")
+
+//Part 7
+var forgeTheFellowship = function () {
+  $(rivendell).append("<div>");
+  $("div").eq(2).attr("id", "the-Fellowship");
+
+  
+
+  for (var i = 0; i < fellowship.length; i++) {
+
+    $($("#the-Fellowship").append($(fellowship).eq(i)));
+      // alert($(fellowship.eq(i)).text() + " has joined the party!")
+      }
 }
 
 forgeTheFellowship();
-
-function theBalrog(){
-  // your answers here
+ //Part 8
+var theBalrog =function (){
+  $(fellowship).eq(0).html("Gandalf the White");
+  $(fellowship).eq(0).css({"background-color": "white", "border": "5px solid grey"});
 }
 
 theBalrog();
 
-function hornOfGondor() {
-  // your answers here
+//part 9
+var hornOfGondor = function () {
+  // alert("The horn of Gondor!");
+  $(fellowship).eq(4).remove()
+
 }
 
 hornOfGondor();
 
-function itsDangerousToGoAlone() {
-  // your answers here
+//Part 10
+var itsDangerousToGoAlone = function () {
+  $(mordor).append("<div>");
+  $("div").eq(3).attr("id", "mount-dooom");
+
+  $($(mordor).append($(fellowship).eq(5)));
+  $($(mordor).append($(fellowship).eq(6)));
 }
 
 itsDangerousToGoAlone();
 
-function weWantsIt() {
-  // your answers here
-}
+var frodo = $(fellowship).eq(5).find("div");
 
-weWantsIt();
+//part 11
+var weWantsIt = function () {
+  $(mordor).append("<div>");
+  $("div").eq(4).attr("id", "gollum");
+  // $("#gollum").append(theRing).eq();
+  $("#gollum").append(frodo).eq();
+  $("#mount-dooom").append($("#gollum"));
 
-function thereAndBackAgain(){
-  // your answers here
-}
+ }
+
+ weWantsIt();
+
+var thereAndBackAgain =function (){
+    // ($(mordor).find($("li")));
+    $(theShire).append($("#middle-earth").find($(".hobbit")));
+    $("#gollum").remove();
+    $("aside").find("ul").remove();
+
+
+  }
 
 thereAndBackAgain();
