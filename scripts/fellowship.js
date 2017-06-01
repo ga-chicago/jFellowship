@@ -117,11 +117,13 @@ var theBalrog =function (){
 
 theBalrog();
 
-// function hornOfGondor() {
-//   // your answers here
-// }
+var hornOfGondor = function () {
+  alert("The horn of Gondor!");
+  $(fellowship).eq(4).remove();
 
-// hornOfGondor();
+}
+
+hornOfGondor();
 
 // function itsDangerousToGoAlone() {
 //   // your answers here
