@@ -112,6 +112,7 @@ forgeTheFellowship();
  //Part 7
 var theBalrog =function (){
   $(fellowship).eq(0).html("Gandalf the White");
+  $(fellowship).eq(0).css({"background-color": "white", "border": "5px solid grey"});
 }
 
 theBalrog();
