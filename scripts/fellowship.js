@@ -86,36 +86,54 @@ leaveTheShire();
 
 function forgeTheFellowship() {
   // your answers here
+  rivendell.append('<div class="theFellowship"></div>')
+  $.each($('li'), function(i, character){
+    $('.theFellowship').append(character)
+    
+  })
 }
 
 forgeTheFellowship();
 
 function theBalrog(){
   // your answers here
+  gandalf.text('Gandalf the White');
+  gandalf.css('background-color', 'white');
+  gandalf.css('border', '5px solid gray');
 }
 
 theBalrog();
 
 function hornOfGondor() {
   // your answers here
+  alert('HORN');
+  boromir.remove();
 }
 
 hornOfGondor();
 
 function itsDangerousToGoAlone() {
   // your answers here
+  mordor.append(frodo);
+  mordor.append(sam);
+  mordor.append('<div id="mount-doom"></div>')
 }
 
 itsDangerousToGoAlone();
 
 function weWantsIt() {
   // your answers here
+  mordor.append('<div id="gollum"></div>');
+  $('#gollum').append(theRing);
+  $('#mount-doom').append($('#gollum'));
 }
 
 weWantsIt();
 
 function thereAndBackAgain(){
   // your answers here
+  $('#gollum').remove();
+  theShire.append($('.hobbit'))
 }
 
 thereAndBackAgain();
